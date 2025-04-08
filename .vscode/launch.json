@@ -16,7 +16,7 @@
             "program": "${file}"
         },
         {
-            "type": "bash",
+            "type": "node",
             "request": "launch",
             "name": "Run Bash Script",
             "program": "${workspaceFolder}/${input:scriptName}"
