@@ -1,0 +1,46 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Lancer le programme",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}"
+        },
+        {
+            "type": "bash",
+            "request": "launch",
+            "name": "Run Bash Script",
+            "program": "${workspaceFolder}/${input:scriptName}"
+        }
+    ],
+    "inputs": [
+        {
+            "type": "pickString",
+            "id": "scriptName",
+            "description": "Select the Bash script to run",
+            "options": [
+                "BasebandOFF.sh",
+                "BasebandON.sh",
+                "EraseiOS12.sh",
+                "EraseiOS14.sh",
+                "FixiServices.sh",
+                "GSMSignal.sh",
+                "GSMWithoutSignal.sh",
+                "MEIDWithoutSignal.sh",
+                "OTADissable.sh",
+                "PasscodeActivation.sh",
+                "PasscodeBackup.sh",
+                "USBPatch.sh"
+            ]
+        }
+    ]
+}
